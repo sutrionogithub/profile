@@ -1,1 +1,196 @@
-halaman depan
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Network Engineer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      transition: 0.3s;
+    }
+
+    .light-mode {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    section {
+      padding: 80px 50px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MyPortfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#project">Project</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="toggle" onclick="toggleMode()">🌙</div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Halo, Saya Sutriono, Network Engineer 👋</h2>
+    <p>Berpengalaman di bidang Networking, IT Support, dan Infrastruktur IT.</p>
+    <a href="#contact" class="btn">Hubungi Saya</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Tentang Saya</h2>
+  <div class="card">
+    <p>
+      Saya adalah seorang Network Engineer dan IT Support yang memiliki pengalaman dalam
+      konfigurasi jaringan, troubleshooting, maintenance server, dan keamanan jaringan.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Mikrotik</div>
+    <div class="card">Cisco</div>
+    <div class="card">TCP/IP</div>
+    <div class="card">Routing & Switching</div>
+    <div class="card">Linux Server</div>
+    <div class="card">Troubleshooting IT</div>
+  </div>
+</section>
+
+<section id="project">
+  <h2>Project</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Setup Jaringan Kantor</h3>
+      <p>Konfigurasi router, VLAN, dan firewall untuk perusahaan.</p>
+    </div>
+    <div class="card">
+      <h3>Monitoring Server</h3>
+      <p>Menggunakan tools monitoring untuk menjaga uptime server.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: emailkamu@email.com</p>
+    <p>WhatsApp: 08xxxxxxxxxx</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Portfolio | Network Engineer</p>
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("light-mode");
+  }
+</script>
+
+</body>
+</html>
